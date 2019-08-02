@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "1031875316462",
+    "firebase_url": "https://garbage-sorter-246217.firebaseio.com",
+    "project_id": "garbage-sorter-246217",
+    "storage_bucket": "garbage-sorter-246217.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031875316462:android:1a20877d1989d0e1",
+        "android_client_info": {
+          "package_name": "com.intelliware.flutter_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031875316462-jgqn171imjf878gbmo44q5csgq26hoi8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdv9ml0MLOX-UM1f3OjKFZoPuogs4d2N0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031875316462-jgqn171imjf878gbmo44q5csgq26hoi8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1031875316462-l373dccb5a47jkvqo1uf5oghbr5p1jnj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.intelliware.flutterdemo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031875316462:android:c9b3a6e765284cb9",
+        "android_client_info": {
+          "package_name": "com.intelliware.garbage_sorter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031875316462-jgqn171imjf878gbmo44q5csgq26hoi8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdv9ml0MLOX-UM1f3OjKFZoPuogs4d2N0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031875316462-jgqn171imjf878gbmo44q5csgq26hoi8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1031875316462-l373dccb5a47jkvqo1uf5oghbr5p1jnj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.intelliware.flutterdemo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
