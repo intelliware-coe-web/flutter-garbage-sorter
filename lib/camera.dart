@@ -8,63 +8,69 @@ import 'package:image_picker/image_picker.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  static const String _title = 'Garbage Sorter';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: _title,
-      home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
-        body: ImageSelectorWidget(),
+      title: 'Garbage Sorter',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: MyHomePage(title: 'Garbage Sorter Camera'),
     );
   }
 }
 
-class ImageSelectorWidget extends StatefulWidget {
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
   @override
-  _ImageSelectorState createState() => _ImageSelectorState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _ImageSelectorState extends State<ImageSelectorWidget> {
+class _MyHomePageState extends State<MyHomePage> {
 
   File _imageFile;
   String _label;
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: <Widget>[
-          RaisedButton(
-            color: Theme.of(context).primaryColor,
-            onPressed: _selectImageFromGallery,
-            child: Text("Select from Gallery"),
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              RaisedButton(
+                color: Theme.of(context).primaryColor,
+                onPressed: _selectFromGallery,
+                child: Text("Select from Gallery"),
+              ),
+              RaisedButton(
+                color: Theme.of(context).primaryColor,
+                onPressed: _selectFromCamera,
+                child: Text("Select from Camera"),
+              ),
+              SizedBox(
+                height: 200,
+                width: 300,
+                child: Center(child: _imageFile == null ? Text("No Image Selected") : Image.file(_imageFile)),
+              ),
+              Center(child: Text(_label == null ? "No Label Found" : _label)),
+            ],
           ),
-          RaisedButton(
-            color: Theme.of(context).primaryColor,
-            onPressed: _selectImageFromCamera,
-            child: Text("Select from Camera"),
-          ),
-          SizedBox(
-            height: 200,
-            width: 300,
-            child: Center(child: _imageFile == null ? Text("No Image Selected") : Image.file(_imageFile)),
-          ),
-          Center(child: _label == null ? Text("No Label Found") : Text(_label),),
-        ],
-        mainAxisAlignment: MainAxisAlignment.center,
-      ),
+        ),
     );
   }
 
-  void _selectImageFromGallery() async {
+  void _selectFromGallery() async {
     final imageFile = await ImagePicker.pickImage(source: ImageSource.gallery);
     processImage(imageFile);
   }
 
-  void _selectImageFromCamera() async {
+  void _selectFromCamera() async {
     final imageFile = await ImagePicker.pickImage(source: ImageSource.camera);
     processImage(imageFile);
   }
