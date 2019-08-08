@@ -170,9 +170,10 @@ class VisionEdgeLabelDetectorPainter extends CustomPainter {
           Shadow(color: Colors.black, blurRadius: 5, offset: Offset(2, 2))
         ],
     ));
-    for (VisionEdgeImageLabel label in labels) {
-      builder.addText(label.text.toUpperCase());
+    if (labels.length > 0) {
+      builder.addText(labels[0].text.toUpperCase());
     }
+
     builder.pop();
 
     canvas.drawParagraph(
